@@ -2,8 +2,8 @@
 	.btn-primary {
 		box-shadow: 0 0 8px 3px black;
 		border: 1px solid black ;
-		width: 15vmax;
-		font-size: xx-large;
+		width: fit-content;
+		font-size: x-large;
 		background-color:powderblue;
 		color:mediumvioletred;
 		font-weight: bolder;
@@ -12,27 +12,28 @@
 
 	form{
 		background-color:mediumpurple;
-		padding: 2%;
 		border-radius: 5%;
 		width: 60vw;
 		margin:auto;
 		margin-bottom: 5vh;
 		font-weight: bolder;
-		font-size: xx-large;
+		font-size: x-large;
 		color:midnightblue;
 		box-shadow: 0 0 8px 3px black;
 		border: 1px solid black ;
 		max-height: 100vh;
+		max-width: 500px;
+		min-width: 310px;
 	}
 	.form-group {
-		width: 50vw;
+		max-width: 600px;
+		width: fit-content;
 		position:relative;
 		margin: 5%;
-		padding: 8%;
-		font-weight: bold;
-		background-color: white;
+		padding: 5%;
+		background-color:rgb(223, 190, 8);
 		border-radius: 15%;	
-		border: 1px solid black ;
+		box-shadow: 0 0 8px 3px black;
 	}
 
 	@media (min-width: 480px) {
@@ -56,6 +57,6 @@
 		  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Tu Edad">
 		</div>
 	</form>
-	<p><a href="."><button type="button" class="btn btn-primary btn-lg">INGRESAR</button></a></p>
+	<p><a href="difficulty"><button type="button" class="btn btn-primary btn-lg">INGRESAR</button></a></p>
 	<p><a href="."><button type="button" class="btn btn-primary btn-lg">VOLVER</button></a></p>	
 </div>
