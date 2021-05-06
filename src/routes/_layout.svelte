@@ -7,7 +7,7 @@
 <style>
 	main {
 		position: relative;
-		background-image: url("fondo.jpg");
+		background-image: url("background.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         width: 100vw;

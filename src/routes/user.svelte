@@ -57,6 +57,6 @@
 		  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Tu Edad">
 		</div>
 	</form>
-	<p><a href="difficulty"><button type="button" class="btn btn-primary btn-lg">INGRESAR</button></a></p>
+	<p><a href="letters"><button type="button" class="btn btn-primary btn-lg">INGRESAR</button></a></p>
 	<p><a href="."><button type="button" class="btn btn-primary btn-lg">VOLVER</button></a></p>	
 </div>
