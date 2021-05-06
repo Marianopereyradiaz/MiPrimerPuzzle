@@ -1,19 +1,16 @@
 <style>
 	img {
 		position: relative;
-		box-shadow: 0 0 8px 5px white, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-		margin-top: 5vh;
+		box-shadow: 0 0 8px 5px black, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 		background-color: white;
 		width: 40vmax;
   		height: auto;
 		margin-bottom: 5vh;
-		border: 1px solid black ;
 		border-radius: 5%;
 	}
 
 	.btn-primary {
-		box-shadow: 0 0 8px 3px white;
-		border: 1px solid black ;
+		box-shadow: 0 0 8px 3px black;
 		width: 15vmax;
 		font-size: xx-large;
 		background-color:powderblue;
