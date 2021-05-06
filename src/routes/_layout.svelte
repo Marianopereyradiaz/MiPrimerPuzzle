@@ -13,8 +13,8 @@
         width: 100vw;
         height: 100vh;
         text-align: center;
-		margin: 0;
 		padding:2%;
+		margin: 0;
 	}
 </style>
 
