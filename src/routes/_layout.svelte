@@ -14,6 +14,7 @@
         height: 100vh;
         text-align: center;
 		margin: 0;
+		padding:2%;
 	}
 </style>
 
