@@ -8,6 +8,7 @@
 		margin-bottom: 2%;
 		border-radius: 5%;
 		min-width: 300px;
+		max-width: 400px;
 	}
 
 	.btn-primary {
