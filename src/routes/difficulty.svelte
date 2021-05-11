@@ -9,6 +9,7 @@
 		color:mediumvioletred;
 		font-weight: bolder;
 		border-radius: 10%;
+        margin:auto;
 	}
 
     h1 {
@@ -42,7 +43,7 @@
 
     p{
         width: fit-content;
-
+        margin: auto;
     }
 	@media (min-width: 480px) {
 
