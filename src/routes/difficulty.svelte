@@ -1,4 +1,5 @@
 <style>
+
 	.btn{
 		box-shadow: 0 0 8px 3px black;
 		border: 1px solid black ;
@@ -8,7 +9,6 @@
 		color:mediumvioletred;
 		font-weight: bolder;
 		border-radius: 10%;
-        margin: auto;
 	}
 
     h1 {
@@ -42,8 +42,7 @@
 
     p{
         width: fit-content;
-        margin: auto;
-        padding: 2%;
+
     }
 	@media (min-width: 480px) {
 
@@ -60,9 +59,9 @@
 </header>
 <br>
 <div class="container">
-    <p><a href="." class="btn btn-success btn-lg active" role="button" aria-pressed="true">FACIL</a></p>
-    <p><a href="." class="btn btn-warning btn-lg active" role="button" aria-pressed="true">MEDIO</a></p>
-    <p><a href="." class="btn btn-danger btn-lg active" role="button" aria-pressed="true">DIFICIL</a></p>
+    <p><a href="game" class="btn btn-success btn-lg active" role="button" aria-pressed="true">FACIL</a></p>
+    <p><a href="game" class="btn btn-warning btn-lg active" role="button" aria-pressed="true">MEDIO</a></p>
+    <p><a href="game" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">DIFICIL</a></p>
 </div>
 <br>
 <div class="boton">
