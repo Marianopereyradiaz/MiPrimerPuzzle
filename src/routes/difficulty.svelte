@@ -43,7 +43,9 @@
 
     p{
         width: fit-content;
-        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
+        
     }
 	@media (min-width: 480px) {
 
