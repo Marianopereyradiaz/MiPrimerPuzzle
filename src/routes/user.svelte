@@ -24,12 +24,13 @@
 		max-height: 100vh;
 		max-width: 500px;
 		min-width: 310px;
+		padding:2%;
 	}
 	.form-group {
 		max-width: 600px;
 		width: fit-content;
 		position:relative;
-		margin: 5%;
+		margin: auto;
 		padding: 5%;
 		background-color:rgb(223, 190, 8);
 		border-radius: 15%;	
@@ -49,12 +50,13 @@
 <div class="boton">
 	<form>
 		<div class="form-group">
-		  <label for="formGroupExampleInput">NOMBRE</label>
-		  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Tu Nombre">
+		  <p><label for="formGroupExampleInput">NOMBRE</label></p>
+		  <p><input type="text" class="form-control" id="formGroupExampleInput" placeholder="Tu Nombre"></p>
 		</div>
+		&nbsp;
 		<div class="form-group">
-		  <label for="formGroupExampleInput2">EDAD</label>
-		  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Tu Edad">
+		  <p><label for="formGroupExampleInput2">EDAD</label></p>
+		  <p><input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Tu Edad"></p>
 		</div>
 	</form>
 	<p><a href="letters"><button type="button" class="btn btn-primary btn-lg">INGRESAR</button></a></p>

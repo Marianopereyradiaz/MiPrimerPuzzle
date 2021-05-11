@@ -32,7 +32,6 @@
         background-color:rgb(12, 209, 110);
         padding: 2%;
         box-shadow: 0 0 8px 3px black;
-        margin: auto;
         width: fit-content;
         border-radius: 15%;
         max-width: 350px;
@@ -41,6 +40,8 @@
 
     p{
         width: fit-content;
+        margin:auto;
+        
     }
 
     .btn-circle.btn-xl {
@@ -68,11 +69,11 @@
 </header>
 <br>
 <div class="container">
-    <p><a href="difficulty" class="btn btn-secondary btn-circle btn-xl" role="button" aria-pressed="true">A</a></p>
-    <p><a href="difficulty" class="btn btn-secondary btn-circle btn-xl" role="button" aria-pressed="true">E</a></p>
+    <p><a href="difficulty" class="btn btn-secondary btn-circle btn-xl" role="button" aria-pressed="true" align="left">A</a>
+    <a href="difficulty" class="btn btn-secondary btn-circle btn-xl" role="button" aria-pressed="true" align="right">E</a></p>
     <p><a href="difficulty" class="btn btn-secondary btn-circle btn-xl" role="button" aria-pressed="true">I</a></p>
-    <p><a href="difficulty" class="btn btn-secondary btn-circle btn-xl" role="button" aria-pressed="true">O</a></p>
-    <p><a href="difficulty" class="btn btn-secondary btn-circle btn-xl" role="button" aria-pressed="true">U</a></p>
+    <p><a href="difficulty" class="btn btn-secondary btn-circle btn-xl" role="button" aria-pressed="true">O</a>
+    <a href="difficulty" class="btn btn-secondary btn-circle btn-xl" role="button" aria-pressed="true">U</a></p>
 </div>
 <br>
 <div class="boton">

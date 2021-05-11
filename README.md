@@ -1,21 +1,2 @@
-# Sapper Example
-
-This directory is a brief example of a [Sapper](https://sapper.svelte.dev/) app that can be deployed with Vercel and zero configuration.
-
-## Deploy Your Own
-
-Deploy your own Sapper project with Vercel.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/vercel/tree/main/examples/sapper)
-
-_Live Example: https://sapper.now-examples.now.sh_
-
-### How We Created This Example
-
-To get started with Sapper deployed with Vercel, you can use [degit](https://github.com/Rich-Harris/degit) to initialize the project:
-
-```shell
-$ npx degit "sveltejs/sapper-template#webpack" my-sapper-app
-```
-
-> The only change made is to change the build script in `package.json` to be `"sapper export"`.
+This is a Sapper based project for HILET's systems analyst carreer , using vercel. 
+Mi Primer Puzzle is an educational game intended for kids, wich intention is to teach how to associate vocal letters with everyday objects, and also how to order images to complete a figure. This way, users can train their skills in a funny and, at the same time, competitive.

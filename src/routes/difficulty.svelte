@@ -1,4 +1,5 @@
 <style>
+
 	.btn{
 		box-shadow: 0 0 8px 3px black;
 		border: 1px solid black ;
@@ -8,6 +9,7 @@
 		color:mediumvioletred;
 		font-weight: bolder;
 		border-radius: 10%;
+        margin:auto;
 	}
 
     h1 {
@@ -41,8 +43,14 @@
 
     .boton{
         width: fit-content;
+<<<<<<< HEAD
         color:white;
         font-weight: bolder;
+=======
+        margin-left: auto;
+        margin-right: auto;
+        
+>>>>>>> master
     }
 	@media (min-width: 480px) {
 
