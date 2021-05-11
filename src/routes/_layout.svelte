@@ -11,10 +11,11 @@
         background-size: cover;
         background-repeat: no-repeat;
         width: 100vw;
-        height: 100vh;
+        height:min-content;
         text-align: center;
 		padding:2%;
 		margin: 0;
+		min-height:100vh;
 	}
 </style>
 

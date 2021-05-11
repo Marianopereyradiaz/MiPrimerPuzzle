@@ -43,14 +43,9 @@
 
     .boton{
         width: fit-content;
-<<<<<<< HEAD
-        color:white;
-        font-weight: bolder;
-=======
         margin-left: auto;
         margin-right: auto;
         
->>>>>>> master
     }
 	@media (min-width: 480px) {
 

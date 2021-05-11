@@ -1,3 +1,8 @@
+<script>
+
+import { svg_element } from "svelte/internal";
+
+</script>
 <style>
 	.btn{
 		box-shadow: 0 0 8px 3px black;
@@ -15,17 +20,36 @@
         background-color:cornflowerblue;
         padding: 2%;
         box-shadow: 0 0 8px 3px black;
-        margin: auto;
         width: fit-content;
         border-radius: 15%;
         max-width: 350px;
 		min-width: 310px;
     }
 
+    .ImgContainer {
+        margin:auto;
+        background-color:white;
+        padding: 2%;
+        box-shadow: 0 0 8px 3px black;
+        width: fit-content;
+        min-width: 320px;
+        border-radius: 15%;
+        max-width: 810px;
+    }
+
     p{
         width: fit-content;
         color:white;
         font-weight: bolder;
+    }
+
+    .ImgFull {
+        max-width: 800px;
+        min-width: 320px;
+        margin:auto;    
+        opacity: 30%;   
+        border: 1px solid black;
+        width: fit-content;
     }
 	@media (min-width: 480px) {
 
@@ -39,8 +63,15 @@
 </svelte:head>
 
 <br>
+<div class="ImgContainer">
+    <div class="ImgFull">
+	    <img src="avionEntero.png" alt="full">
+        <svg>
+    </div>
+</div>
 <div class="container">
-
+	<img src="avion1.png" alt="">
+    <img src="avion2.png" alt="">
 </div>
 <br>
 <div class="boton">
