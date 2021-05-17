@@ -15,6 +15,8 @@
         if (moving){
             left +=e.movementX;
             top+= e.movementY;
+            left +=e.touches[0].clientX;
+            top+=e.touches[0].clientY;
         }
     }
 
