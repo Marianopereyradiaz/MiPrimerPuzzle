@@ -43,6 +43,8 @@
 
     .boton{
         width: fit-content;
+        color:white;
+        font-weight: bolder;
         margin-left: auto;
         margin-right: auto;
         
