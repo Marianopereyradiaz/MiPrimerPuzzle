@@ -17,6 +17,8 @@
             top+= e.movementY;
         }
     }
+
+
 </script>
 
 <style>
@@ -29,8 +31,8 @@
     }
 </style>
 
-<svelte:window on:dblclick={stop} on:mousemove={move}/>
+<svelte:window on:onmouseup={stop} on:click={stop} on:mousemove={move}/>
 
-<section on:click={start} style="left: {left}px; top: {top}px;" class="draggable">
+<section on:t on:mousedown={start} style="left: {left}px; top: {top}px;" class="draggable">
     <slot></slot>
 </section>
