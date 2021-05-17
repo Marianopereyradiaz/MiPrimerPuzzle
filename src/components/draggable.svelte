@@ -24,14 +24,13 @@
         user-select: none;
         position:absolute;
         border: solid 1px black;
-        cursor: move;
         background-color: white;
         width: fit-content;
     }
 </style>
 
-<svelte:window on:mouseup={stop} on:mousemove={move}/>
+<svelte:window on:dblclick={stop} on:mousemove={move}/>
 
-<section on:mousedown={start} style="left: {left}px; top: {top}px;" class="draggable">
+<section on:click={start} style="left: {left}px; top: {top}px;" class="draggable">
     <slot></slot>
 </section>
