@@ -33,6 +33,6 @@
 
 <svelte:window on:onmouseup={stop} on:click={stop} on:mousemove={move}/>
 
-<section on:t on:mousedown={start} style="left: {left}px; top: {top}px;" class="draggable">
+<section on:touchstart={start} on:mousedown={start} style="left: {left}px; top: {top}px;" class="draggable">
     <slot></slot>
 </section>
