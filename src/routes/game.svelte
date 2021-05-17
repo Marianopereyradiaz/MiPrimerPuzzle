@@ -4,6 +4,14 @@
 	export let images = ["avion1.png","avion2.png","avion3.png","avion4.png","avion5.png","avion6.png"];
 </script>
 <style>
+
+	img {
+		position: relative;
+		background-color: white;
+  		height: auto;
+		min-width: 50px;
+		max-width: 150px;
+	}
 	@media (min-width: 480px) {
 
 	}
@@ -16,7 +24,7 @@
 </svelte:head>
 
 {#each images as image}
-	<Draggable top={Math.floor(Math.random() * 500)} left={Math.floor(Math.random() * 500)}>
+	<Draggable top={Math.floor(Math.random() * 300)} left={Math.floor(Math.random() * 300)}>
 		<img src="{image}" alt="">
 	</Draggable>
 {/each}
