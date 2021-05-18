@@ -50,6 +50,14 @@
 </script>
 
 <style>
+	section{
+		display: grid;
+		grid-template-columns: 200px 200px 200px;
+		margin:auto;
+		align-items: center;
+		text-align: center;
+	}
+
 	div {
 		position: relative;
 		width: 200px;
