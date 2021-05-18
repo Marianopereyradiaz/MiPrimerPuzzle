@@ -10,12 +10,12 @@
 		background-image: url("background.jpg");
         background-size: cover;
         background-repeat: no-repeat;
-        width: 100vw;
-        height:90vh;
+        width: 96vw;
+        height:88vh;
         text-align: center;
 		padding:2%;
 		margin: 0;
-		min-height:90vh;
+		min-height:70vh;
 	}
 </style>
 

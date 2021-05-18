@@ -12,6 +12,7 @@
         box-shadow: 0 0 8px 3px black;
         background-color: steelblue;
         margin:0;
+        width: 96vw;
     }
 </style>
 <footer>

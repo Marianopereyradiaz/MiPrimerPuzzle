@@ -9,6 +9,7 @@
 		padding: 0;
 		background-color: black;
 		color:white;
+		width: 96vw;
 	}
 
 	ul {
