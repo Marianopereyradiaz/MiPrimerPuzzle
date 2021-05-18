@@ -26,7 +26,7 @@
 </svelte:head>
 
 {#each images as image}
-	<Draggable top={Math.floor(Math.random() * 300)} left={Math.floor(Math.random() * 300)}>
+	<Draggable top={Math.floor(Math.random() * 300)} left={Math.floor(Math.random() * 200)}>
 		<img src="{image}" alt="">
 	</Draggable>
 {/each}
