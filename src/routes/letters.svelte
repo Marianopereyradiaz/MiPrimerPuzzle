@@ -14,7 +14,7 @@
         font-weight: bold;
         font-size: xx-large;
     }
-    header{
+    .selection{
         background-color:rgb(219, 236, 58);
         padding:3%;
         border-radius: 25%;
@@ -25,6 +25,7 @@
         box-shadow: 0 0 8px 3px black;
         max-width: 500px;
 		min-width: 310px;
+        margin-top: 2%;
     }
 
     .container {
@@ -36,6 +37,7 @@
         border-radius: 15%;
         max-width: 350px;
 		min-width: 310px;
+        margin-top: 2%;
     }
 
     p{
@@ -64,10 +66,9 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 </svelte:head>
-<header>
+<div class="selection">
     <h1>¿Con cuál letra vas a jugar?</h1>
-</header>
-<br>
+</div>
 <div class="container">
     <p><a href="difficulty" class="btn btn-secondary btn-circle btn-xl" role="button" aria-pressed="true" align="left">A</a>
     <a href="difficulty" class="btn btn-secondary btn-circle btn-xl" role="button" aria-pressed="true" align="right">E</a></p>

@@ -15,6 +15,7 @@
 		border-radius: 5%;
 		width: 60vw;
 		margin:auto;
+		margin-top: 2%;
 		margin-bottom: 5vh;
 		font-weight: bolder;
 		font-size: x-large;
