@@ -11,7 +11,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         width: 100vw;
-        height:min-content;
+        height:90vh;
         text-align: center;
 		padding:2%;
 		margin: 0;
