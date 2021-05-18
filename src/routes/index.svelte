@@ -5,6 +5,7 @@
 		background-color: white;
 		width: 40vw;
   		height: auto;
+		margin-top: 2%;
 		margin-bottom: 2%;
 		border-radius: 5%;
 		min-width: 300px;

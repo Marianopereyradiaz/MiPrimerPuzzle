@@ -9,7 +9,9 @@
 		padding: 0;
 		background-color: black;
 		color:white;
-		width: 96vw;
+		width: 100vw;
+		min-height: 6vh;
+		max-height: 12vh;
 	}
 
 	ul {
@@ -42,7 +44,7 @@
 		position: absolute;
 		content: '';
 		width: calc(100% - 1em);
-		height: 2px;
+		height: auto;
 		background-color: rgb(255,62,0);
 		display: block;
 		bottom: -1px;
