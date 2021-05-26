@@ -1,3 +1,7 @@
+<script>
+	import { user } from "../components/user.js";
+</script>
+
 <style>
 	.btn-primary {
 		box-shadow: 0 0 8px 3px black;
@@ -52,12 +56,12 @@
 	<form>
 		<div class="form-group">
 		  <p><label for="formGroupExampleInput">NOMBRE</label></p>
-		  <p><input type="text" class="form-control" id="formGroupExampleInput" placeholder="Tu Nombre"></p>
+		  <p><input type="text" bind:value={$user.name} class="form-control" id="formGroupExampleInput" placeholder="Tu Nombre"></p>
 		</div>
 		&nbsp;
 		<div class="form-group">
 		  <p><label for="formGroupExampleInput2">EDAD</label></p>
-		  <p><input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Tu Edad"></p>
+		  <p><input type="number" bind:value={$user.age} class="form-control" id="formGroupExampleInput2" placeholder="Tu Edad"></p>
 		</div>
 	</form>
 	<p><a href="letters"><button type="button" class="btn btn-primary btn-lg">INGRESAR</button></a></p>
