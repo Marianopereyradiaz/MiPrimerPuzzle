@@ -1,6 +1,3 @@
-<script>
-	export let segment;
-</script>
 <style>
     p {  
         text-align: right;

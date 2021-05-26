@@ -1,99 +1,117 @@
 <script>
-	import { dndzone } from 'svelte-dnd-action';
+	import {draggable} from '../components/dragdrop.js'
+	import {crossfade} from 'svelte/transition'
+	import {quintOut, elasticOut} from 'svelte/easing'
 	import { flip } from 'svelte/animate';
-
-	let items = [
-		{
-			id: 1,
-			text: 'avion1.png',
-		},
-		{
-			id: 2,
-			text: 'avion2.png',
-		},
-		{
-			id: 3,
-			text: 'avion3.png',
-		},		{
-			id: 4,
-			text: 'avion4.png',
-		},
-		{
-			id: 5,
-			text: 'avion5.png',
-		},
-		{
-			id: 6,
-			text: 'avion6.png',
-		},
-	];
+	import Timer from '../components/timer.svelte'
 	
-	const flipDurationMs = 200;
-	let dragDisabled = true;
+	const shelf = [null, null, null, null, null,null]
+	const cart = [{id: 5, name: 'avion5.png'},{id: 1, name: 'avion1.png'}, {id: 6, name: 'avion6.png'}, {id: 2, name: 'avion2.png'},{id: 3, name: 'avion3.png'},{id: 4, name: 'avion4.png'}]
+		
+	function putInShelf(item, index) {
+		const oldItem = shelf[index]
+		const oldShelfIndex = shelf.indexOf(item)
+		 if (cart.indexOf(item) !== -1) cart.splice(cart.indexOf(item), 1)
+		if (oldShelfIndex !== -1) shelf[oldShelfIndex] = oldItem
+		else if (oldItem) cart.push(oldItem)
+		 shelf[index] = item;
+		cart = cart
+	}
+		
+	function putInCart(item) {
+		if (cart.indexOf(item) !== -1) cart.splice(cart.indexOf(item), 1)
+	  if (shelf.indexOf(item) !== -1) shelf[shelf.indexOf(item)] = null
+		cart.push(item)
+		cart = cart
+	}
 	
-	const handleConsider = evt => {
-		items = evt.detail.items;
-	};
-	const handleFinalize = evt => {
-		items = evt.detail.items;
-		// Ensure dragging is stopped on drag finish
-		dragDisabled = true;
-	};
+	const [send, receive] = crossfade({
+	  duration: d => 600,
+	  easing: elasticOut,
+	  fallback(node, params) {
+		const style = getComputedStyle(node);
+		const transform = style.transform === 'none' ? '' : style.transform;
 	
-		const startDrag = () => {
-		dragDisabled = false;
-	};
-	const stopDrag = () => {
-		dragDisabled = true;
-	};
+		return {
+		  duration: 600,
+		  easing: quintOut,
+		  css: t => `
+			transform: ${transform} scale(${t});
+			opacity: ${t}
+		  `
+		};
+	  }
+	});
+	
+	</script>
+	
+	<style>
+		.shelf{
+			display: inline-grid;
+			grid-template-columns: auto auto auto;
+			position: relative;
+		}
 
-</script>
+		.slot {
+			position: relative;
+			display: inline-block;
+			width: 200px;
+			height: 235px;
+			vertical-align: top;
+			border:solid black 1px;
+			background-color: white;
 
-<style>
-	section{
-		display: grid;
-		grid-template-columns: 200px 200px 200px;
-		margin:auto;
-		align-items: center;
-		text-align: center;
-	}
+		}
+		.cart {
+			position: relative;
+			min-height: 235px;
+			min-width: 200px;
+			margin: auto;
+			border: solid 1px black;
+		}
+		.item {
+			height: fit-content;
+			position: relative;
+			display: inline-block;
+			margin: auto;
+		}
+		.slot .item {
+			position: relative;
 
-	div {
-		position: relative;
-		width: 200px;
-		border: 1px solid black;
-		margin: auto;
-	}
-	.handle {
-		cursor: grab;
-		position: absolute;
-		width: 200px;
-		height: 235px;
-		margin:auto;
-	}
-</style>
-
+		}
+		:global(.dragged) {
+		  pointer-events: none;
+			z-index: 100;
+		}
+	</style>
+	
 <svelte:head>
 	<title>Mi Primer Puzzle</title>
-	<link href="draganddrop.css" rel="stylesheet">
-	<script src="//code.jquery.com/jquery.min.js"></script>
-	<script src="draganddrop.js"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 </svelte:head>
 
-
-
-
-<section
-	use:dndzone="{{ items, dragDisabled, flipDurationMs }}"
-	on:consider="{handleConsider}"
-	on:finalize="{handleFinalize}"
->
-	{#each items as item (item.id)}
-		<div animate:flip="{{ duration: flipDurationMs }}">
-			<div class="handle" on:mousedown={startDrag} on:touchstart={startDrag} on:mouseup={stopDrag} on:touchend={stopDrag}/>
-			<span><img src="{item.text}" alt=""></span>
-  	</div>
+<div class="shelf">
+	{#each shelf as item, index }
+		<div class="slot" on:dropped={(e) => putInShelf(e.detail, index)}>
+			{#if item}
+				{#each [item] as item (item.id)}
+						<div class="item" use:draggable={{data: item, targets: ['.cart', '.slot', '.slot .item']}} in:receive={item.id} out:send={item.id} on:dropped={(e) => putInShelf(e.detail, index)}>
+							<img src="{item.name}" alt="">
+						</div>
+				{/each}
+			{/if}
+		</div>
 	{/each}
-</section>
+</div>
+<br>
+<div class="cart" on:dropped={(e) => putInCart(e.detail)}>
+	{#each cart as item, index (item.id)}
+		<div class="item" animate:flip use:draggable={{data: item, targets: ['.slot', '.slot .item']}} in:receive={item.id} out:send={item.id}>
+			<img src="{item.name}" alt="">	
+		</div>
+	{/each}
+</div>
+<br>
+<Timer/>
+	
