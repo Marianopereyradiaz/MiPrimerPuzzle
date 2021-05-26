@@ -1,6 +1,6 @@
 <script>
-    	import { onMount } from 'svelte';
-	let counter = 0;
+    import { onMount } from 'svelte';
+	export let counter = 0;
 	onMount(() => {
 		const interval = setInterval(() => {
 			counter = counter + 1;
@@ -8,6 +8,13 @@
 		return () => clearInterval(interval);
 	});
 </script>
+
+<script context="module">
+	export function getCounter() {
+	  return {counter};
+	}
+	</script>
+
 <style>
 	.time{
 		padding: 2%;
